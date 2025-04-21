@@ -86,6 +86,8 @@ public static class Messages
         <@{0}>
         О себе:
         {1}
+        
+        Напиши собеседнику сразу, чтобы не забыть.
         """;
 
     public const string MatchFailMessage =
