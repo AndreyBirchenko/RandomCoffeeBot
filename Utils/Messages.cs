@@ -96,6 +96,13 @@ public static class Messages
         Пары на эту неделю распределены. Для тебя, к сожалению, не хватило партнера. Надеюсь получится подобрать кого-то в следующий раз.
         """;
 
+    public const string DebugInfoMessage =
+        """
+        Всего пользователей {0}
+        Активных пользователй {1}
+        Пользователей приостановивших встречи {2}
+        """;
+
 
     public static async Task<PostMessageResponse> PostMessageAsync(this ISlackApiClient slack, string text, string channel)
     {

@@ -19,6 +19,20 @@ public static class Db
         }
     }
 
+    public static async Task<List<User>?> GetUsersAsync()
+    {
+        try
+        {
+            await using var db = new AppDbContext();
+            return await db.Users.ToListAsync();
+        }
+        catch (Exception ex)
+        {
+            Log.Message($"Ошибка при получении списка пользователей: {ex.Message}");
+            return null;
+        }
+    }
+
     public static async Task<bool> CreateOrUpdateUserAsync(User data)
     {
         try
